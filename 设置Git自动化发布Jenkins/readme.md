@@ -1,0 +1,1 @@
+## 因为没有Git管理员权限，只有Jenkins权限，于是打算在本地Git提交的时候，触发Python调用Jenkins
