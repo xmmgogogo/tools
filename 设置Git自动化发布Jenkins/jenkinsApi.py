@@ -52,18 +52,6 @@ if job_name == "school":
 # 实例化jenkins对象,连接远程的jenkins master server
 server = jenkins.Jenkins(jenkins_server_url, username=user_id, password=api_token)
 
-"""
-POST http://你的Jenkins服务器IP:8080/view/hd/job/school/build?delay=0sec
-
-name: Branch
-value: */dev
-statusCode: 303
-redirectTo: .
-Jenkins-Crumb: 1b8ca0e01b8af82c326a2ef7540189c7e759a00c79b12e492cf131f1c7ff6924
-json: {"parameter": {"name": "Branch", "value": "*/dev"}, "statusCode": "303", "redirectTo": ".", "Jenkins-Crumb": "1b8ca0e01b8af82c326a2ef7540189c7e759a00c79b12e492cf131f1c7ff6924"}
-Submit: 开始构建
-"""
-
 if is_more == True:
     # String参数化构建job名为job_name的job, 参数param_dict为字典形式,如：param_dict= {"param1"：“value1”, “param2”：“value2”}
     qNum = server.build_job(job_name, parameters=param_dict)

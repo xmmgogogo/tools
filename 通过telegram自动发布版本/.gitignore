@@ -1,0 +1,7 @@
+*.exe
+*.tar.gz
+/.idea
+telegram
+telegram.exe~
+logs/
+*.zip
